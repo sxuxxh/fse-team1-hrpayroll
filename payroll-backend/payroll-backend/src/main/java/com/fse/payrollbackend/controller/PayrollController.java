@@ -20,7 +20,7 @@ public class PayrollController {
 
     //Constructor Injection
     @Autowired
-    public PayrollController(@Qualifier("PayrollServiceIMPL") IPayrollService payrollService) {
+    public PayrollController(@Qualifier("payrollServiceIMPL") IPayrollService payrollService) {
         this.payrollService = payrollService;
     }
 
@@ -34,8 +34,8 @@ public class PayrollController {
     //read a Employee request
     //http://localhost:8080/hrpayroll/api/v1/reatrieveAEmployee/1
     @GetMapping("retrieveAEmployee/{employeeID}")
-    public Employee findByID(@PathVariable int employeeId) {
-        return payrollService.findByID(employeeId);
+    public Employee findById(@PathVariable int employeeId) {
+        return payrollService.findById(employeeId);
     }
 
     //This is a POST request to add an Employee
