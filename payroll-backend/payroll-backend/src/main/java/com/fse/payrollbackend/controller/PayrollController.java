@@ -1,4 +1,5 @@
 package com.fse.payrollbackend.controller;
+import com.fse.payrollbackend.service.IPayrollService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,7 @@ import java.util.List;
     Class: PayrollController - Controller methods for PayrollServiceIMPL
  */
 
-@CrossOrigin   (origins = {"http://localhost:3000"})
+@CrossOrigin   (origins = {"http://localhost:4200"})
 @RestController
 @RequestMapping ("/hrpayroll/api/v1")
 public class PayrollController {
