@@ -5,6 +5,7 @@
  */
 
 package com.fse.payrollbackend.dao;
+import com.fse.payrollbackend.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +40,7 @@ public class PayrollDAOIMPL implements IPayrollDAO{
 
     @Override
     @Transactional //Defines the scope of a single database transaction.
-    public Employee findById(int computerPartId) {
+    public Employee findById(int employeeId) {
         Session currentSession = entityManager.unwrap(Session.class);
         return currentSession.get(Employee.class, employeeId);
     }

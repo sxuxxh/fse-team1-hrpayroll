@@ -13,6 +13,4 @@ public interface IPayrollService {
     Employee findById(int employeeId);
     void saveOrUpdate(Employee theEmployee);
     void deleteById(int employeeId);
-
-    Employee findByID(int employeeID);
 }

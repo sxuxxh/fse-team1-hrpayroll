@@ -1,5 +1,7 @@
 package com.fse.payrollbackend.dao;
 
+import com.fse.payrollbackend.entity.Employee;
+
 import java.util.List;
 
 public interface IPayrollDAO {
