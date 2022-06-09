@@ -1,4 +1,5 @@
 package com.fse.payrollbackend.controller;
+import com.fse.payrollbackend.entity.Employee;
 import com.fse.payrollbackend.service.IPayrollService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
