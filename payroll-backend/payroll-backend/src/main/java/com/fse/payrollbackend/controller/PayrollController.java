@@ -34,15 +34,15 @@ public class PayrollController {
     //read a Employee request
     //http://localhost:8080/hrpayroll/api/v1/reatrieveAEmployee/1
     @GetMapping("retrieveAEmployee/{employeeID}")
-    public Employee findByID(@PathVariable int employeeID) {
-        return payrollService.findByID(employeeID);
+    public Employee findByID(@PathVariable int employeeId) {
+        return payrollService.findByID(employeeId);
     }
 
     //This is a POST request to add an Employee
     //http://localhost:8080/hrpayroll/api/v1/addAEmployee
     @PostMapping("/addAEmployee")
     public Employee addAEmployee(@RequestBody Employee theEmployee) {
-        theEmployee.setEmployeeID(0);
+        theEmployee.setEmployeeId(0);
         payrollService.saveOrUpdate(theEmployee);
         return theEmployee;
     }
@@ -56,9 +56,9 @@ public class PayrollController {
     }
     //This is a DELETE request to update an existing employee
     //http://localhost:8080/hrpayroll/api/v1/deleteAEmployee/1
-    @DeleteMapping("/deleteAEmployee/{employeeID}")
-    public String deleteAEmployee(@PathVariable int employeeID) {
-        payrollService.deleteById(employeeID);
-        return "Deleted Employee ID: " + employeeID;
+    @DeleteMapping("/deleteAEmployee/{employeeId}")
+    public String deleteAEmployee(@PathVariable int employeeId) {
+        payrollService.deleteById(employeeId);
+        return "Deleted Employee ID: " + employeeId;
     }
 }
